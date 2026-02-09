@@ -12,8 +12,23 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "My Valentine's Day Surprise 💕",
+  title: "Will you be my Valentine? 💕",
   description: "A special interactive Valentine's Day website for my amazing girlfriend",
+  keywords: ["Valentine", "love", "romantic", "surprise", "prank", "girlfriend"],
+  authors: [{ name: "Salah Eddine Berredjem" }],
+  openGraph: {
+    title: "Will You Be My Valentine? 💘",
+    description: "A special Valentine's Day surprise with a playful twist",
+    type: "website",
+    images: [
+      {
+        url: "/valentine-og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Valentine's Day Surprise",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({ children }) {
