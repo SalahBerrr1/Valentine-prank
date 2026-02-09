@@ -19,7 +19,6 @@ export default function ValentinePage() {
   const audioRef = useRef(null);
 
   const [isPlaying, setIsPlaying] = useState(false);
-  const myVoiceAudioRef = useRef(null);
 
   const containerRef = useRef(null);
   const noButtonRef = useRef(null);
@@ -107,41 +106,6 @@ export default function ValentinePage() {
     return () => clearInterval(interval);
   }, []);
 
-  // handle play/pause
-  const toggleVoice = () => {
-    if (myVoiceAudioRef.current) {
-      if (isPlaying) {
-        myVoiceAudioRef.current.pause();
-        setIsPlaying(false);
-      } else {
-        myVoiceAudioRef.current.currentTime = 0;
-        myVoiceAudioRef.current.play()
-          .then(() => {
-            setIsPlaying(true);
-          })
-          .catch(e => {
-            console.log("Voice play failed:", e);
-            setIsPlaying(false);
-          });
-      }
-    }
-  };
-  // handle when audio ends
-  useEffect(() => {
-    const audio = myVoiceAudioRef.current;
-    if (audio) {
-      const handleEnded = () => setIsPlaying(false);
-      const handlePause = () => setIsPlaying(false);
-      
-      audio.addEventListener('ended', handleEnded);
-      audio.addEventListener('pause', handlePause);
-      
-      return () => {
-        audio.removeEventListener('ended', handleEnded);
-        audio.removeEventListener('pause', handlePause);
-      };
-    }
-  }, []);
 
   return (
   <>
@@ -175,45 +139,13 @@ export default function ValentinePage() {
       <main  ref={containerRef} className="relative p-6 w-full max-w-xl bg-white/30 backdrop-blur-sm rounded-3xl shadow-2xl text-center justify-center items-start z-10 overflow-hidden">
           <div className='w-full h-24 flex justify-center'>
             <img src="/ss.webp" alt="her" className="w-24 h-24 rounded-md object-cover items-center justify-center shadow-[0_0_3px_#000000]" />
+            <img src="/aa.webp" alt="me" className="w-24 h-24 rounded-md object-cover shadow-[0_0_3px_#000000]" />
           </div>
           <h1 className="text-3xl md:text-4xl font-bold text-rose-600  mb-3">
             For My Senouma</h1>
-          <section className="my-6">
-            <div className="flex items-center justify-center gap-3">
-              <img src="/aa.webp" alt="me" className="w-12 h-12 rounded-md object-cover shadow-[0_0_3px_#000000]" />
-              <button onClick={toggleVoice} className={`flex items-center justify-center gap-2 px-4 py-2 rounded-full transition-all duration-300 ${
-                  isPlaying 
-                    ? 'bg-rose-500 hover:bg-rose-600' 
-                    : 'bg-emerald-500 hover:bg-emerald-600'} text-white font-medium shadow-lg hover:shadow-xl`}>
-                {isPlaying ? (
-                  <><svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM7 8a1 1 0 012 0v4a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v4a1 1 0 102 0V8a1 1 0 00-1-1z" clipRule="evenodd" /></svg>
-                    Pause Message</>
-                ) : (
-                  <><svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" /></svg>
-                    Listen to my Message</>
-                )}
-              </button>
-              
-              {isPlaying && (
-                <article className="flex items-center gap-2 text-sm text-gray-600">
-                  <div className="flex gap-1">
-                    <div className="w-1 h-3 bg-rose-400 rounded-full animate-pulse"></div>
-                    <div className="w-1 h-4 bg-rose-400 rounded-full animate-pulse" style={{animationDelay: '0.2s'}}></div>
-                    <div className="w-1 h-3 bg-rose-400 rounded-full animate-pulse" style={{animationDelay: '0.4s'}}></div>
-                  </div>
-                  <span>Playing...</span>
-                </article>
-              )}
-            </div>
-            <audio ref={myVoiceAudioRef} preload="metadata">
-              <source src="/myVoice.ogg" type="audio/ogg" />
-              Your browser does not support the audio element.
-            </audio>
-          </section>
-           
+          
           <p className="text-gray-600 mb-6 md:mb-8 text-lg">
             kima t3rfy ana dimo9raty w peace👨🏻. w ha na3tik le choix tkhayri (yes✔️/ no✖️) b ra7tek, ma n'obligik 3a walo.</p>
-          
           {/* Question Box */}
           <div className="bg-rose-50 border-2 border-dashed border-rose-200 rounded-2xl p-6">
             <p className="text-2xl md:text-3xl font-bold text-rose-700 mb-6">
