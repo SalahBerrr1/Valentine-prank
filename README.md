@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+💘 Valentine's Day Prank Website
+A fun, interactive Valentine's Day website with a playful twist! This website asks your girlfriend to be your Valentine but with a humorous prank element.
 
-## Getting Started
+🎯 Features
+Mobile-first design - Perfect for viewing on phones
 
-First, run the development server:
+Interactive "No" button - Moves away when clicked
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Playful prank questions - With unexpected answers
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Scary surprise - Jump scare on multiple "No" clicks
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Voice message - Personal audio message capability
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Confetti effects - Celebratory animations
 
-## Learn More
+Beautiful UI - Romantic pink gradient theme
 
-To learn more about Next.js, take a look at the following resources:
+🎮 How It Works
+First Question: "Would you be my Valentine?" with Yes/No buttons
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+No Button: Moves around and changes text when clicked
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Yes Button: Leads to a second question
 
-## Deploy on Vercel
+Second Question: "Do you think I'll be your Valentine?" with a prank twist
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Scary Surprise: After 5 "No" clicks on the first question
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Voice Message: Personal audio message playable by clicking a button
+
+🛠️ Technologies Used
+Next.js 14+ (React framework)
+
+Tailwind CSS (Styling)
+
+React Confetti (Celebration effects)
+
+Lucide React (Icons)
+
+HTML5 Audio (Sound effects)
+
+💡 Tips for Best Experience
+Send the link to her phone
+
+Make sure she has sound on
+
+Be ready for her reaction!
+
+Have a real Valentine's gift prepared 😉
+
+📄 License
+MIT License - feel free to use and modify for personal use!
+
+Made with ❤️ for a special Valentine's Day surprise!
+
