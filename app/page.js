@@ -172,11 +172,15 @@ export default function ValentinePage() {
       ))}
 
       {/* Main Container */}
-      <main  ref={containerRef} className="relative p-6 w-full max-w-xl bg-white/30 backdrop-blur-sm rounded-3xl shadow-2xl text-center z-10 overflow-hidden">
-          <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-rose-600 to-pink-600 bg-clip-text text-transparent mb-3">
+      <main  ref={containerRef} className="relative p-6 w-full max-w-xl bg-white/30 backdrop-blur-sm rounded-3xl shadow-2xl text-center justify-center items-start z-10 overflow-hidden">
+          <div className='w-full h-24 flex justify-center'>
+            <img src="/ss.webp" alt="her" className="w-24 h-24 rounded-md object-cover items-center justify-center shadow-[0_0_3px_#000000]" />
+          </div>
+          <h1 className="text-3xl md:text-4xl font-bold text-rose-600  mb-3">
             For My Senouma</h1>
           <section className="my-6">
             <div className="flex items-center justify-center gap-3">
+              <img src="/aa.webp" alt="me" className="w-12 h-12 rounded-md object-cover shadow-[0_0_3px_#000000]" />
               <button onClick={toggleVoice} className={`flex items-center justify-center gap-2 px-4 py-2 rounded-full transition-all duration-300 ${
                   isPlaying 
                     ? 'bg-rose-500 hover:bg-rose-600' 
