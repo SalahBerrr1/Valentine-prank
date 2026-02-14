@@ -3,7 +3,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Confetti from 'react-confetti';
-import { Heart, Gem, CheckCircle, XCircle, Fullscreen } from 'lucide-react';
+import { Heart, Gem, CheckCircle, Fullscreen } from 'lucide-react';
 
 export default function ValentinePage() {
   // State management
@@ -26,8 +26,7 @@ export default function ValentinePage() {
 
   // No button texts for random selection
   const noButtonTexts = [
-    "No", "Ah ma sm3tkch, NO?", "No mala?", 
-    "Aki 7a tendmi", "Akher mo7awla"
+    "No", "You didnt meant it right!" , "Not gonna happen!", "Are you sure?", "Last chance!"
   ];
 
   // Handle No button click - make it move
@@ -139,13 +138,12 @@ export default function ValentinePage() {
       <main  ref={containerRef} className="relative p-6 w-full max-w-xl bg-white/30 backdrop-blur-sm rounded-3xl shadow-2xl text-center justify-center items-start z-10 overflow-hidden">
           <div className='w-full h-24 flex justify-center'>
             <img src="/ss.webp" alt="her" className="w-24 h-24 rounded-md object-cover items-center justify-center shadow-[0_0_3px_#000000]" />
-            <img src="/aa.webp" alt="me" className="w-24 h-24 rounded-md object-cover shadow-[0_0_3px_#000000]" />
           </div>
           <h1 className="text-3xl md:text-4xl font-bold text-rose-600  mb-3">
-            For My Senouma</h1>
+            For My Girl</h1>
           
           <p className="text-gray-600 mb-6 md:mb-8 text-lg">
-            kima t3rfy ana dimo9raty w peace👨🏻. w ha na3tik le choix tkhayri (yes✔️/ no✖️) b ra7tek, ma n'obligik 3a walo.</p>
+            As you know it's 14 february today, and i send you this to ask some questions. Choose the YES or NO as answer.</p>
           {/* Question Box */}
           <div className="bg-rose-50 border-2 border-dashed border-rose-200 rounded-2xl p-6">
             <p className="text-2xl md:text-3xl font-bold text-rose-700 mb-6">
@@ -179,7 +177,7 @@ export default function ValentinePage() {
               You Said YES! 💍</h2>
             
             <p className="text-gray-600 mb-2 text-lg">
-              Drk 2 eme question...
+              NOW, time for the second question...
             </p>
             
             <p className="text-xl font-bold text-rose-700 mb-8">
@@ -211,7 +209,7 @@ export default function ValentinePage() {
             
             <div className="space-y-4 text-gray-700 mb-8">
               <p className="text-lg">
-                Nti brk thebi tkouni valentine t3y bsh ana mn9blch,haha
+                I won't be your valentine, Hahaha!
               </p>
               <p className="text-lg">Just kidding, of course I&apos;ll be your Valentine! Happy Valentine&apos;s Day, my love! ❤️</p>
                 <p className="text-xl font-bold text-rose-600">
