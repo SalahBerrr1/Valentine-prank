@@ -4,6 +4,14 @@ A fun, interactive Valentine's Day website with a playful twist! This website as
 # Live Demo:
 https://will-you-be-my-valentine-senouma.vercel.app/
 
+# Gitlab Account:
+https://gitlab.com/SalahBerr
+
+# Contact:
+📧 Email: berredjem.salah.eddine@gmail.com
+
+💼 LinkedIn: https://www.linkedin.com/in/salah-eddine-berredjem-2a3953361?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app
+
 🎯 Features
 Mobile-first design - Perfect for viewing on phones
 
